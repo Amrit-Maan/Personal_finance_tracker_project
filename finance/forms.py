@@ -14,4 +14,10 @@ class TransactionForm(forms.ModelForm):
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ("username", "email")
+        fields = ("username", "email", "password1", "password2")
+        help_texts = {
+            'username': None,
+            'password1': None,
+            'password2': None,
+            'email': None,
+        }
