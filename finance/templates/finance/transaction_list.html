@@ -1,0 +1,9 @@
+{% extends 'finance/base.html' %}
+{% block content %}
+<h2>Your Transactions</h2>
+{% for t in transactions %}
+<p>{{ t.date }} – {{ t.title }} – ${{ t.amount }}</p>
+{% empty %}
+<p>No transactions added yet.</p>
+{% endfor %}
+{% endblock %}
