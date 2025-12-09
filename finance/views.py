@@ -38,7 +38,7 @@ def register(request):
     if request.method == "POST" and form.is_valid():
         user = form.save()
         login(request, user)
-        return redirect("transaction_list")
+        return redirect("login")
     return render(request, "finance/register.html", {"form": form})
 
 
